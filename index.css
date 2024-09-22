@@ -34,3 +34,31 @@ nav ul {
     list-style-type: none;
     display: flex;
 }
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: var(--background-color);
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+h1, h2 {
+    color: var(--primary-dark);
+}
+
+#buscador {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.producto-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
