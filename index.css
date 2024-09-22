@@ -101,3 +101,17 @@ button {
 button:hover {
     background-color: var(--primary-light);
 }
+footer {
+    background-color: var(--primary-dark);
+    color: var(--background-color);
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#quienes-somos {
+    background-color: #E8F5E9;
+    padding: 2rem;
+}
