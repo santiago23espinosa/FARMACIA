@@ -62,3 +62,42 @@ h1, h2 {
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
+.producto {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+}
+
+.producto .precio-anterior {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.producto .precio-actual {
+    font-weight: bold;
+    color: var(--discount-color);
+    font-size: 1.2em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input, textarea, button {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+button {
+    background-color: var(--secondary-color);
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--primary-light);
+}
