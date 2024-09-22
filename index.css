@@ -7,7 +7,7 @@
     --background-color: #FFFFFF;
     --discount-color: #FF0000;
 }
-h1(color: green font-size: 16px;)
+h1{color: green font-size: 16px;}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
