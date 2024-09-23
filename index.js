@@ -101,11 +101,18 @@ productos.sort(function(a, b) {
 // Mostrar productos inicialmente
 mostrarProductos(productos);
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Tu código JavaScript existente
 
-    // Agregar el código de desplazamiento suave aquí
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        // ... (código de desplazamiento suave)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 20, // 
+                behavior: 'smooth'
+            });
+        }
     });
 });
