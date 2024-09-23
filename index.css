@@ -17,7 +17,7 @@ body {
 
 header {
     background-color: var(--primary-color);
-    padding: 1rem;
+    padding: 2rem;
 }
 
 nav {
@@ -27,9 +27,9 @@ nav {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    color: white;
+    color: rgb(41, 236, 16);
 }
 
 nav ul {
@@ -181,18 +181,18 @@ footer {
 .centered-menu {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 500%;
 }
 
 .logo {
     position: absolute;
-    right: 1rem;
+    right: 3rem;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .logo img {
-    height: 40px;
+    height: 100px;
     width: auto;
 }
 
