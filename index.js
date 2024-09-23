@@ -1,50 +1,50 @@
-var productos = [
+const productos = [
     { 
-        nombre: "Producto 1", 
-        precioAnterior: 20.00, 
-        precioActual: 15.00,
+        nombre: "ACETAMINOFEN", 
+        precioAnterior: 2000, 
+        precioActual: 1500,
         imagen: "images/producto1.jpg"
     },
     { 
-        nombre: "Producto 2", 
-        precioAnterior: 25.00, 
-        precioActual: 18.00,
+        nombre: "IBUPROFENO", 
+        precioAnterior: 2500, 
+        precioActual: 1800,
         imagen: "images/producto2.jpg"
     },
     { 
-        nombre: "Producto 3", 
-        precioAnterior: 30.00, 
-        precioActual: 22.00,
+        nombre: "VITAMINA C", 
+        precioAnterior: 3000, 
+        precioActual: 2200,
         imagen: "images/producto3.jpg"
     },
     { 
-        nombre: "Producto 4", 
-        precioAnterior: 15.00, 
-        precioActual: 12.00,
+        nombre: "ALCOHOL EN GEL", 
+        precioAnterior: 1500, 
+        precioActual: 1200,
         imagen: "images/producto4.jpg"
     },
     { 
-        nombre: "Producto 5", 
-        precioAnterior: 40.00, 
-        precioActual: 35.00,
+        nombre: "ASPIRINA", 
+        precioAnterior: 4000, 
+        precioActual: 3500,
         imagen: "images/producto5.jpg"
     },
     { 
-        nombre: "Producto 6", 
+        nombre: "OMEPREZOL", 
         precioAnterior: 22.00, 
         precioActual: 18.00,
         imagen: "images/producto6.jpg"
     },
     { 
-        nombre: "Producto 7", 
-        precioAnterior: 18.00, 
-        precioActual: 14.00,
+        nombre: "AZITROMICINA", 
+        precioAnterior: 1800, 
+        precioActual: 1400,
         imagen: "images/producto7.jpg"
     },
     { 
-        nombre: "Producto 8", 
-        precioAnterior: 35.00, 
-        precioActual: 30.00,
+        nombre: "DICLOFENACO", 
+        precioAnterior: 3500, 
+        precioActual: 3000,
         imagen: "images/producto8.jpg"
     }
 ];

@@ -18,40 +18,37 @@
             </ul>
         </nav>
     </header>
-    <main></main>
-        <section id="inicio">
-            <h1>Bienvenido a FAMISALUD</h1>
-            <p>Tu farmacia de confianza en línea</p>
-        </section>
-
-        <section id="productos">
+    <main>
+        <section id="products">
             <h2>Nuestros Productos</h2>
-            <input type="text" id="buscador" placeholder="Buscar productos...">
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Buscar productos...">
+            </div>
             <div class="product-grid">
             </div>
         </section>
-        <section id="servicios"></section>
-            <h2>Nuestros Servicios</h2>
-            <ul>
-                <li>Entrega a domicilio</li>
-                <li>Consulta en línea</li>
-                <li>Recetas electrónicas</li>
-            </ul>
-        </section>
-        <section id="contacto"></section>
+
+        <section id="contact">
             <h2>Contáctanos</h2>
-            <form>
-                <input type="text" placeholder="Nombre" required>
-                <input type="email" placeholder="Correo electrónico" required>
-                <input type="celular" placeholder="celular" required>
-                <textarea placeholder="Mensaje" required></textarea>
+            <form id="contact-form">
+                <input type="text" id="name" name="name" placeholder="Nombre" required>
+                <input type="tel" id="phone" name="phone" placeholder="Celular" required>
+                <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                <textarea id="message" name="message" placeholder="Mensaje" required></textarea>
                 <button type="submit">Enviar</button>
             </form>
         </section>
-        <footer>
-            <p>&copy; 2024 FAMISALUD. Todos los derechos reservados.</p>
-        </footer>
-    
-        <script src="script.js"></script>
-    </body>
-    </html>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FAMISALUD. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>>&copy; 2024 FAMISALUD. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
