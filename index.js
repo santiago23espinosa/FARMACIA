@@ -1,3 +1,8 @@
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', (e) => {
+        document.body.style.backgroundColor = e.target.getAttribute('data-color');
+    });
+});
 const productos = [
     { 
         nombre: "ACETAMINOFEN", 
@@ -52,21 +57,31 @@ var contenedor = document.querySelector('.product-grid');
 
 function mostrarProductos(productosAMostrar) {
     contenedor.innerHTML = '';
+    let productosConDescuento = 0;
     for (var i = 0; i < productosAMostrar.length; i++) {
         var producto = productosAMostrar[i];
         var productoElement = document.createElement('div');
         productoElement.className = 'product';
+        
+        let precioHtml = '<p class="price">$' + producto.precioActual.toFixed(2) + '</p>';
+        
+        if (productosConDescuento < 3 && producto.precioAnterior > producto.precioActual) {
+            precioHtml = '<p class="price">' +
+                '<span class="original-price">$' + producto.precioAnterior.toFixed(2) + '</span> ' +
+                '<span class="discount-price">$' + producto.precioActual.toFixed(2) + '</span>' +
+                '</p>';
+            productosConDescuento++;
+        }
+        
         productoElement.innerHTML = 
             '<img src="' + producto.imagen + '" alt="' + producto.nombre + '">' +
             '<h3>' + producto.nombre + '</h3>' +
-            '<p class="price">' +
-            '<span class="original-price">$' + producto.precioAnterior.toFixed(2) + '</span> ' +
-            '<span class="discount-price">$' + producto.precioActual.toFixed(2) + '</span>' +
-            '</p>' +
+            precioHtml +
             '<button>Agregar al carrito</button>';
         contenedor.appendChild(productoElement);
     }
 }
+
 
 function filtrarProductos() {
     var searchTerm = document.getElementById('search-input').value.toLowerCase();
