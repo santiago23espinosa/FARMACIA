@@ -169,3 +169,37 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    z-index: 1000;
+}
+
+.centered-menu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+main {
+    padding-top: 80px; /* Ajusta este valor según la altura de tu encabezado */
+}
+
+body {
+    transition: background-color 0.3s ease;
+}
