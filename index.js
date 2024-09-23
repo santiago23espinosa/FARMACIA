@@ -1,12 +1,52 @@
 var productos = [
-    { nombre: 'Acetaminofén', precioAnterior: 7.900, precioActual: 5.900, descuento: true },
-    { nombre: 'Ibuprofeno', precioAnterior: 9.900, precioActual: 7.900, descuento: true },
-    { nombre: 'Vitamina C', precioAnterior: 12.500, precioActual: 9.500, descuento: true },
-    { nombre: 'Alcohol en gel', precioAnterior: 4.800, precioActual: 3.800, descuento: true },
-    { nombre: 'Aspirina', precio: 6.900, descuento: false },
-    { nombre: 'Omeprazol', precio: 8.300, descuento: false },
-    { nombre: 'Azitromicina', precio: 7.500, descuento: false },
-    { nombre: 'Diclofenaco', precio: 14.000, descuento: false }
+    { 
+        nombre: "Producto 1", 
+        precioAnterior: 20.00, 
+        precioActual: 15.00,
+        imagen: "images/producto1.jpg"
+    },
+    { 
+        nombre: "Producto 2", 
+        precioAnterior: 25.00, 
+        precioActual: 18.00,
+        imagen: "images/producto2.jpg"
+    },
+    { 
+        nombre: "Producto 3", 
+        precioAnterior: 30.00, 
+        precioActual: 22.00,
+        imagen: "images/producto3.jpg"
+    },
+    { 
+        nombre: "Producto 4", 
+        precioAnterior: 15.00, 
+        precioActual: 12.00,
+        imagen: "images/producto4.jpg"
+    },
+    { 
+        nombre: "Producto 5", 
+        precioAnterior: 40.00, 
+        precioActual: 35.00,
+        imagen: "images/producto5.jpg"
+    },
+    { 
+        nombre: "Producto 6", 
+        precioAnterior: 22.00, 
+        precioActual: 18.00,
+        imagen: "images/producto6.jpg"
+    },
+    { 
+        nombre: "Producto 7", 
+        precioAnterior: 18.00, 
+        precioActual: 14.00,
+        imagen: "images/producto7.jpg"
+    },
+    { 
+        nombre: "Producto 8", 
+        precioAnterior: 35.00, 
+        precioActual: 30.00,
+        imagen: "images/producto8.jpg"
+    }
 ];
 var contenedor = document.querySelector('.product-grid');
 
@@ -17,6 +57,7 @@ function mostrarProductos(productosAMostrar) {
         var productoElement = document.createElement('div');
         productoElement.className = 'product';
         productoElement.innerHTML = 
+            '<img src="' + producto.imagen + '" alt="' + producto.nombre + '">' +
             '<h3>' + producto.nombre + '</h3>' +
             '<p class="price">' +
             '<span class="original-price">$' + producto.precioAnterior.toFixed(2) + '</span> ' +
