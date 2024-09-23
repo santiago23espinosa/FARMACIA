@@ -100,3 +100,12 @@ productos.sort(function(a, b) {
 
 // Mostrar productos inicialmente
 mostrarProductos(productos);
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Tu código JavaScript existente
+
+    // Agregar el código de desplazamiento suave aquí
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        // ... (código de desplazamiento suave)
+    });
+});
