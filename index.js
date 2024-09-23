@@ -36,8 +36,8 @@ const productos = [
     },
     { 
         nombre: "OMEPREZOL", 
-        precioAnterior: 22.00, 
-        precioActual: 18.00,
+        precioAnterior: 2200, 
+        precioActual: 1800,
         imagen: "images/producto6.jpg"
     },
     { 
