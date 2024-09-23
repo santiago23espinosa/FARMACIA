@@ -1,4 +1,4 @@
-const productos = [
+var productos = [
     { nombre: 'Paracetamol', precioAnterior: 7.900, precioActual: 5.900, descuento: true },
     { nombre: 'Ibuprofeno', precioAnterior: 9.900, precioActual: 7.900, descuento: true },
     { nombre: 'Vitamina C', precioAnterior: 12.500, precioActual: 9.500, descuento: true },
@@ -8,27 +8,39 @@ const productos = [
     { nombre: 'Loratadina', precio: 7.500, descuento: false },
     { nombre: 'Multivitamínico', precio: 14.00, descuento: false }
 ];
-function mostrarProductos(productosAMostrar) {
-    const contenedor = document.querySelector('.producto-container');
-    contenedor.innerHTML = ''; // Limpiar contenedor
+var contenedor = document.querySelector('.product-grid');
 
-    productosAMostrar.forEach(producto => {
-        const productoElement = document.createElement('div');
-        productoElement.classList.add('producto');
-        
-        if (producto.descuento) {
-            productoElement.innerHTML = `
-                <h3>${producto.nombre}</h3>
-                <p class="precio-anterior">$${producto.precioAnterior.toFixed(2)}</p>
-                <p class="precio-actual">$${producto.precioActual.toFixed(2)}</p>
-            `;
-        } else {
-            productoElement.innerHTML = `
-                <h3>${producto.nombre}</h3>
-                <p class="precio-actual">$${producto.precio.toFixed(2)}</p>
-            `;
-        }
-        
+function mostrarProductos(productosAMostrar) {
+    contenedor.innerHTML = '';
+    for (var i = 0; i < productosAMostrar.length; i++) {
+        var producto = productosAMostrar[i];
+        var productoElement = document.createElement('div');
+        productoElement.className = 'product';
+        productoElement.innerHTML = 
+            '<h3>' + producto.nombre + '</h3>' +
+            '<p class="price">' +
+            '<span class="original-price">$' + producto.precioAnterior.toFixed(2) + '</span> ' +
+            '<span class="discount-price">$' + producto.precioActual.toFixed(2) + '</span>' +
+            '</p>' +
+            '<button>Agregar al carrito</button>';
         contenedor.appendChild(productoElement);
-    });
+    }
 }
+
+function filtrarProductos() {
+    var searchTerm = document.getElementById('search-input').value.toLowerCase();
+    var productosFiltrados = productos.filter(function(producto) {
+        return producto.nombre.toLowerCase().includes(searchTerm);
+    });
+    mostrarProductos(productosFiltrados);
+}
+
+document.getElementById('search-input').addEventListener('input', filtrarProductos);
+
+// Ordenar productos alfabéticamente
+productos.sort(function(a, b) {
+    return a.nombre.localeCompare(b.nombre);
+});
+
+// Mostrar productos inicialmente
+mostrarProductos(productos);
