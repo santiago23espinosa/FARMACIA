@@ -320,6 +320,6 @@ main {
 
 @media (max-width: 768px) {
     .services-container {
-        grid-template-columns: 1fr; /* Hacer una columna en pantallas pequeñas */
+        grid-template-columns: 1fr; 
     }
 }
